@@ -1,0 +1,7 @@
+name = "LatticeGraph"
+uuid = "15d35e1f-d3fd-4541-a614-59c15a1feacb"
+authors = ["Yupeng <wangyp1@shanghaitech.edu.cn>"]
+version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
