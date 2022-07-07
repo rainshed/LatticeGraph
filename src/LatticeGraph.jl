@@ -191,7 +191,9 @@ function DelAllEdge!(G::LatGraph,pos::Vector{<:Integer})
     G[pos...].edges = Edge[]
 end
 
-
+function LatGraph(size::Vector{<:Integer})
+    return LatGraph(x->true,size)
+end
 function SquareGraph(
     L::Integer
 )
@@ -321,14 +323,20 @@ function ConMat(G::LatGraph)
         The bases are ranked by G.pos.  
     """
     H = zeros(ComplexF64,length(G.pos),length(G.pos));
+    edgerepe = false
     for m in 1:length(G.pos)
         node = G.nodes[G.pos[m]...];
         edges = node.edges;
         for j in 1:length(edges)
             n = findfirst(x->x==edges[j].node.pos,G.pos)
+            edgerepe = edgerepe || H[m,n]!=0
             H[m,n] = edges[j].weight
         end
     end
+    if edgerepe
+        @warn "There are two or more edges share two vertexes"
+    end
     H
 end
+
 end # module
