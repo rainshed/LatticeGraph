@@ -18,7 +18,7 @@ pkg> add https://github.com/rainshed/LatticeGraph.jl
 
 例如，最简单的左右hopping不一样的非厄米哈密顿量$H = \sum (rc^\dagger_ic_{i+1}+sc^\dagger_{i+1}c_i)$的图如下。
 
-![image-20220712171341020](/Users/yupengwang/Library/CloudStorage/OneDrive-shanghaitech.edu.cn/learn/project/NH/LatticeGraph/README.assets/image-20220712171341020.png)
+![image](README.assets/image-20220712171341020.png)
 
 ## 生成一张图
 
