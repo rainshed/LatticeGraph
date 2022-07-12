@@ -59,6 +59,8 @@ function Base.display(G::LatGraph)
             end
             println()
         end
+    elseif length(G.size)==1
+        println("one dimension chain with $(length(G.pos)) sites")
     else
         println("display function is to be finished")
     end
